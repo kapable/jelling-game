@@ -8,8 +8,12 @@ function MainPage() {
     }, [])
 
     return (
-        <div>
-            MainPage
+        <div style={{
+            display: 'flex', justifyContent: "center", alignItems: "center"
+            , margin: "15rem auto 0"
+        }}>
+            <h2>Landing Page</h2>
+            <br />
         </div>
     )
 }

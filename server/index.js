@@ -90,6 +90,6 @@ app.get('/api/users/logout', auth, (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`This app is listening on port ${port}`)
 })
 

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from './components/Defaults/MainPage'
+import LoginPage from './components/Users/LoginPage';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <Router>
       <Switch>
         <Route path='/' component={MainPage} exact />
+        <Route path='/login' component={LoginPage} exact />
       </Switch>
     </Router>
   );
