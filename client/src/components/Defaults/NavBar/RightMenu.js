@@ -17,7 +17,7 @@ function RightMenu(props) {
         axios.get(`/api/users/logout`).then(response => {
             if (response.status === 200) {
                 props.history.push("/login");
-                window.location.reload();
+                // window.location.reload();
             } else {
                 alert('로그아웃에 실패 했습니다.')
             }
@@ -34,7 +34,7 @@ function RightMenu(props) {
         return (
             <Fragment>
                 <a href={`/MyPage/${UserData._id}`}>마이페이지</a>
-                <p onClick={logoutHandler}>로그아웃</p>
+                <a href="/login" onClick={logoutHandler}>로그아웃</a>
             </Fragment>
         )
     }
