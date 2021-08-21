@@ -29,9 +29,17 @@ app.get('/api/hello', (req, res) => {
     res.send("hello everyone!")
 })
 
+app.get('/api/users/register', (req, res) => {
+    res.send("You are at User Register route!")
+})
+
+app.get('/api/users/login', (req, res) => {
+    res.send("You are at User Login route!")
+})
+
 app.post('/api/users/register', (req, res) => {
     // 회원가입 할 때 필요한 정보들을 client에서 가져오면 그것들을 데이터 베이스에 넣어준다.
-    
+
     const user = new User(req.body)
     // userSchema.pre 작동
     user.save((err, userInfo) => {
