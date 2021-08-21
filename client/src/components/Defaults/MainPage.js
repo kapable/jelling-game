@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 function MainPage(props) {
     useEffect(() => {
@@ -12,7 +13,6 @@ function MainPage(props) {
         axios.get('/api/users/logout')
         .then(response => {
             if(response.data.success) {
-                console.log(response.data);
                 props.history.push('/login')
             } else {
                 alert('로그아웃 하는데 실패 했습니다.')
@@ -32,4 +32,4 @@ function MainPage(props) {
     )
 }
 
-export default MainPage
+export default withRouter(MainPage)
