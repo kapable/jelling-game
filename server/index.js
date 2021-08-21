@@ -90,6 +90,15 @@ app.get('/api/users/auth', auth, (req, res) => {
     })
 })
 
+app.post('/api/users/getUserInfo', (req, res) => {
+    User.findOne({"_id": req.body.userId})
+    .populate("_id")
+    .exec((err, userInfo) => {
+        if(err) return res.status(400).send(err)
+        return res.status(200).json({ success: true, userInfo })
+    })
+})
+
 app.get('/api/users/logout', auth, (req, res) => {
     User.findOneAndUpdate({ _id: req.user._id }, { token:"" }, (err, user) => {
     if(err) return res.json({ success: false, err });

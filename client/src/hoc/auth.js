@@ -12,7 +12,7 @@ export default function auth(SpecificComponent, option, adminRoute = null) {
         useEffect(() => {
             axios.get('/api/users/auth')
             .then(response => {
-                // console.log(response.data)
+                console.log(response.data)
 
                 // 로그인 하지 않은 상태
                 if(!response.data.isAuth) {
