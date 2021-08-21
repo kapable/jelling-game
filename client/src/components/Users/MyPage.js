@@ -21,7 +21,6 @@ function MyPage(props) {
 
     return (
         <Fragment>
-            {console.log(UserInfo)}
             <div style={{ display: "block", margin: "15rem auto 0", justifyContent: "center", textAlign: "center"}}>
                 <h1>마이페이지</h1>
             </div>
