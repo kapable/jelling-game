@@ -1,11 +1,24 @@
 import React, { useEffect } from 'react'
 import axios from 'axios';
 
-function MainPage() {
+function MainPage(props) {
     useEffect(() => {
         axios.get('/api/hello')
         .then(response => console.log(response.data))
     }, [])
+
+    const onClickHandler = (e) => {
+        e.preventDefault();
+        axios.get('/api/users/logout')
+        .then(response => {
+            if(response.data.success) {
+                console.log(response.data);
+                props.history.push('/login')
+            } else {
+                alert('로그아웃 하는데 실패 했습니다.')
+            }
+        })
+    }
 
     return (
         <div style={{
@@ -14,6 +27,7 @@ function MainPage() {
         }}>
             <h2>Landing Page</h2>
             <br />
+            <button onClick={onClickHandler}>로그아웃</button>
         </div>
     )
 }
