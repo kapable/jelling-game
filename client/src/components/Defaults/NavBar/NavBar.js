@@ -1,6 +1,7 @@
 import React from 'react'
 import LeftMenu from './LeftMenu';
 import RightMenu from './RightMenu';
+import MobileMenu from './MobileMenu';
 import './NavBar.css';
 
 function NavBar() {
@@ -24,6 +25,9 @@ function NavBar() {
                 </div>
                 <div className="menu_rigth">
                     <RightMenu mode="horizontal" />
+                </div>
+                <div className="mobile-nav-class">
+                    <MobileMenu />
                 </div>
             </div>
         </nav>
