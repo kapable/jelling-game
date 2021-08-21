@@ -7,8 +7,8 @@ function GamePage(props) {
     return (
         <Fragment>
             <iframe
-                title={props.game_info[0]}
-                src={props.game_info[1]}
+                title={props.game_title}
+                src={props.game_source}
                 className="game-iframe"
                 ></iframe>
             <button
