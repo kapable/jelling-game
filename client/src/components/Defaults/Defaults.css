@@ -1,0 +1,42 @@
+/* Site Main page */
+.main-div {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 500px;
+}
+h2 {
+  display: block;
+}
+.main-game-thumbnail-link {
+  display: block;
+  margin: 0rem auto;
+  max-width: 100%;
+}
+
+.main-game-thumbnail-img {
+  display: block;
+  margin: 0rem auto;
+  max-width: 100%;
+}
+
+/* Game page */
+.game-iframe {
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin: 3.5rem auto;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  left: 0;
+}
+
+.game-to-main-btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0rem auto;
+  top: 50rem;
+}
