@@ -62,6 +62,7 @@ a:active {
     border: none;
     height: 3.5rem;
     display: block;
+    background-color: white;
   }
 
   .mobile__menu__wrapper {
