@@ -6,6 +6,7 @@ phases:
     commands:
       - npm install --unsafe-perm
       - npm install babel-cli cross-env webpack-cli --global
+      - npm install
   build:
     commands:
       - npm run build
