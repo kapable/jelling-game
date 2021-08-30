@@ -15,4 +15,4 @@ artifacts:
   base-directory: 'build'
 cache:
   paths:
-    - './client/node_modules/**/*'
+    - "node_modules/**/*"
