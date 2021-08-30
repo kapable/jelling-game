@@ -4,8 +4,11 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - npm install --unsafe-perm
+      - npm install --unsafe-perm=True
       - npm install babel-cli cross-env webpack-cli --global
+  pre_build:
+    commands:
+      - npm install
   build:
     commands:
       - npm run build
@@ -15,4 +18,4 @@ artifacts:
   base-directory: 'build'
 cache:
   paths:
-    - "root/.npm/**/*"
+    - "./node_modules/**/*"
