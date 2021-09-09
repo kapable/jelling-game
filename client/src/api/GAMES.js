@@ -3,10 +3,10 @@ const GAMES = [
     {
         title:"Palette Game",
         titleKor:"팔레트 게임",
-        sourceURL:"http://jelling.s3-website.ap-northeast-2.amazonaws.com/Games/palette/index.html",
+        sourceURL:"https://d3ihichowo5d7n.cloudfront.net/Games/palette/index.html",
         mainUrl:"palette",
-        thumbImage:"https://jellingimages.s3.ap-northeast-2.amazonaws.com/thumbImages/palette-thumb.png",
-        introImage:"https://jellingimages.s3.ap-northeast-2.amazonaws.com/introImages/palette-intro.png",
+        thumbImage:"https://d1tmnxl0ftkgjo.cloudfront.net/thumbImages/palette-thumb.png",
+        introImage:"https://d1tmnxl0ftkgjo.cloudfront.net/introImages/palette-intro.png",
         lang:"Eng",
         desc:`- It is a game where paint is dropped and synthesized by touch.\n
         - Finally, making a palette and increasing the score.`,
