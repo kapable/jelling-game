@@ -3,7 +3,7 @@ import { withRouter, Link } from 'react-router-dom';
 import GAMES from '../../api/GAMES'
 import './Defaults.css';
 
-function MainPage(props) {
+function MainPage() {
     return (
         <div className="main-div">
             {GAMES.map((item) => (

@@ -14,6 +14,10 @@ function IntroPage(props) {
         return (
             <>
                 <img src={props.game.introImage} alt={props.game.title} onClick={onImgClick} className="intro-img"/>
+                <h3 className="intro-title">{props.game.titleKor}</h3>
+                <p className="intro-desc">{props.game.descKor}</p>
+                <h3 className="intro-title">{props.game.title}</h3>
+                <p className="intro-desc">{props.game.desc}</p>
                 <Link to='/' className="intro-list-go-back-link">
                     <div
                         className="go-to-back-btn"

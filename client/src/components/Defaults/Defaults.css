@@ -28,13 +28,20 @@ h2 {
   align-items: center;
   text-align: center;
   margin: 0rem auto;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .intro-img {
-  max-width: 500px;
-  margin: 3rem auto;
+  max-width: 100%;
+  margin: 0rem auto 3rem;
   cursor: pointer;
+}
+
+.intro-desc {
+  font-size: 0.8rem;
+  text-align: left;
+  white-space: pre-line;
+  margin: 0rem 1rem 2.5rem;
 }
 
 .intro-list-go-back-link {
@@ -72,4 +79,14 @@ h2 {
   text-align: center;
   margin: 0rem auto;
   top: 55rem;
+}
+
+/* Footer */
+.intro-footer {
+  text-align: center;
+  margin: 3rem auto;
+  font-family: var(--title-font);
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #cecfd0;
 }
