@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { withRouter, Link } from 'react-router-dom';
+import MetaTagRenderer from './MetaTagRenderer';
+import STARTBTN from '../../api/DefaultImg/start-btn.png'
 
 function IntroPage(props) {
     const [IsGameMode, setIsGameMode] = useState(false);
@@ -14,6 +16,7 @@ function IntroPage(props) {
         return (
             <>
                 <img src={props.game.introImage} alt={props.game.title} onClick={onImgClick} className="intro-img"/>
+                <img src={STARTBTN} alt="게임 시작하기" onClick={onImgClick} className="intro-img"/>
                 <h3 className="intro-title">{props.game.titleKor}</h3>
                 <p className="intro-desc">{props.game.descKor}</p>
                 <h3 className="intro-title">{props.game.title}</h3>
@@ -38,6 +41,7 @@ function IntroPage(props) {
     }
     return (
         <div className="intro-game-main-div">
+            <MetaTagRenderer game={props.game}/>
             {IsGameMode ? gameRenderer(props) : introRenderer(props)}
         </div>
     )

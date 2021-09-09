@@ -12,6 +12,7 @@
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-snap": "^1.23.0",
@@ -37,7 +38,7 @@
       "removeComments": true
     },
     "cacheAjaxRequests": false,
-    "source" : "../build",
+    "source": "../build",
     "include": [
       "/"
     ]
