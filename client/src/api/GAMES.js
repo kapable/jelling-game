@@ -332,6 +332,19 @@ const GAMES = [
         descKor:`- 간단한 클릭으로 즐길 수 있는 캐쥬얼 골프 게임 입니다.\n
                 - 스윙하고 싶은 방향에 마우스를 두고 클릭하며, 홀 안에 공을 넣는 게임.`,
     },
+    {
+        title:"Fruits Blender",
+        titleKor:"후르츠블렌더",
+        sourceURL:"https://jellinggame.com/Games/fruitsblender/index.html",
+        mainUrl:"fruitblender",
+        thumbImage:"https://images.jellinggame.com/thumbImages/fruitsblender-thumb.png",
+        introImage:"https://images.jellinggame.com/introImages/fruitsblender-intro.png",
+        lang:"Eng",
+        desc:`- Casual that you can realize\n
+                This game implements it.`,
+        descKor:`- 간단한 클릭으로 즐길 수 있는 미니 캐쥬얼 게임\n
+                나이프를 날려 과일을 썰어 주스를 만드는 게임 입니다.`,
+    },
 ]
 
 export default GAMES;
