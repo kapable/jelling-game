@@ -41,6 +41,7 @@
     "cacheAjaxRequests": false,
     "source": "../build",
     "include": [
+      "/"
     ]
   },
   "eslintConfig": {
