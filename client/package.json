@@ -41,7 +41,6 @@
     "cacheAjaxRequests": false,
     "source": "../build",
     "include": [
-      "/", "/palette", "/colormatch"
     ]
   },
   "eslintConfig": {
