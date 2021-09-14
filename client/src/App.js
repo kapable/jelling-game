@@ -44,10 +44,13 @@ function App() {
       <Router>
         <Switch>
           {/* Show All Game thumbnail */}
-          <Route path='/' exact>
-            {mainMetaTagRenderer()}
-            <MainPage />
-          </Route>
+          {['/', '/m'].map((item) => (
+            <Route path={item} exact>
+              {mainMetaTagRenderer()}
+              <MainPage />
+            </Route>
+          ))}
+          
 
           {/* Login route */}
           <Route path='/login' component={LoginPage} exact />
