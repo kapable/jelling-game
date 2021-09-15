@@ -15,8 +15,8 @@ function IntroPage(props) {
     const introRenderer =(props) => {
         return (
             <>
-                <div><img src={props.game.introImage} alt={props.game.title} onClick={onImgClick} className="intro-img"/></div>
-                <div><img src={STARTBTN} alt="게임 시작하기" onClick={onImgClick} className="intro-img"/></div>
+                <img src={props.game.introImage} alt={props.game.title} onClick={onImgClick} className="intro-img"/>
+                <img src={STARTBTN} alt="게임 시작하기" onClick={onImgClick} className="intro-img"/>
                 <h3 className="intro-title">{props.game.titleKor}</h3>
                 <p className="intro-desc">{props.game.descKor}</p>
                 <h3 className="intro-title">{props.game.title}</h3>
