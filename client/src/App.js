@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import MainPage from './components/Defaults/MainPage';
@@ -5,12 +6,25 @@ import LoginPage from './components/Users/LoginPage';
 import RegisterPage from './components/Users/RegisterPage';
 import MyPage from './components/Users/MyPage';
 import IntroPage from './components/Defaults/IntroPage';
+import GamePage from './components/Defaults/GamePage';
 import Footer from './components/Defaults/Footer';
 import GAMES from './api/GAMES'
 import TOPBANNER from './api/DefaultImg/top-banner.png'
 import './App.css';
+import ReactGA from 'react-ga';
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize('UA-207780789-1', {
+      debug: false,
+      gaOptions:{
+        siteSpeedSampleRate: 100
+      }
+    })
+    ReactGA.set({page:window.location.pathname+window.location.search})
+    ReactGA.pageview(window.location.pathname+window.location.search)
+  }, [])
+
   const mainMetaTagRenderer = () => {
     return(
       <Helmet>
@@ -66,6 +80,16 @@ function App() {
             <Route
               path={'/'+item.mainUrl}
               component={() => <IntroPage game={item}/>}
+              key={item.mainUrl}
+              exact
+            />
+          ))}
+
+          {/* Each game play route */}
+          {GAMES.map((item) => (
+            <Route
+              path={'/'+item.mainUrl + '/play/'}
+              component={() => <GamePage game={item}/>}
               key={item.mainUrl}
               exact
             />

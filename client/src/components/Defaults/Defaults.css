@@ -35,6 +35,7 @@ h2 {
   max-width: 100%;
   margin: 0rem auto 0rem;
   cursor: pointer;
+  display: block;
 }
 
 .intro-desc {
@@ -90,4 +91,12 @@ h2 {
   font-weight: 800;
   font-size: 0.8rem;
   color: #cecfd0;
+}
+
+/* PC screen Responsive */
+@media (min-width: 767px) {
+  .intro-title-desc-div {
+    max-width: 30%;
+    margin: 0rem auto;
+  }
 }

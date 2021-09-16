@@ -1,48 +1,47 @@
-import React, { useState, useCallback } from 'react'
+import React from 'react'
 import { withRouter, Link } from 'react-router-dom';
 import MetaTagRenderer from './MetaTagRenderer';
 import STARTBTN from '../../api/DefaultImg/start-btn.png'
+import ReactGA from 'react-ga';
 
 function IntroPage(props) {
-    const [IsGameMode, setIsGameMode] = useState(false);
 
-    const onImgClick = useCallback(
-        () => {
-            setIsGameMode(true)
-        },
-        [],
-    )
-    const introRenderer =(props) => {
-        return (
-            <>
-                <img src={props.game.introImage} alt={props.game.title} onClick={onImgClick} className="intro-img"/>
-                <img src={STARTBTN} alt="게임 시작하기" onClick={onImgClick} className="intro-img"/>
+    const onImgClick = () => {
+        _eventSenderGA("Paging", "Click Start-game Image", 'intro page')
+    }
+
+    const onBtnClick = () => {
+        _eventSenderGA("Paging", "Click Start-game Button", 'intro page')
+    }
+
+    const _eventSenderGA = (category, action, label) => {
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
+
+    return (
+        <div className="intro-game-main-div">
+            <MetaTagRenderer game={props.game}/>
+            <Link to={'/'+props.game.mainUrl + '/play/'} className="intro-go-to-game-img-link" onClick={onImgClick}>
+                <img src={props.game.introImage} alt={props.game.title} className="intro-img"/>
+            </Link>
+            <Link to={'/'+props.game.mainUrl + '/play/'} className="intro-go-to-game-btn-link" onClick={onBtnClick}>
+                <img src={STARTBTN} alt="게임 시작하기" className="intro-img"/>
+            </Link>
+            <div className="intro-title-desc-div">
                 <h3 className="intro-title">{props.game.titleKor}</h3>
                 <p className="intro-desc">{props.game.descKor}</p>
                 <h3 className="intro-title">{props.game.title}</h3>
                 <p className="intro-desc">{props.game.desc}</p>
-                <Link to='/' className="intro-list-go-back-link">
-                    <div
-                        className="go-to-back-btn"
-                        >← 메인으로 돌아가기</div>
-                </Link>
-            </>
-        )
-    }
-
-    const gameRenderer = (props) => {
-        return (
-            <iframe
-                title={props.game.title}
-                src={props.game.sourceURL}
-                className="game-iframe"
-            ></iframe>
-        )
-    }
-    return (
-        <div className="intro-game-main-div">
-            <MetaTagRenderer game={props.game}/>
-            {IsGameMode ? gameRenderer(props) : introRenderer(props)}
+            </div>
+            <Link to='/' className="intro-list-go-back-link">
+                <div
+                    className="go-to-back-btn"
+                    >← 메인으로 돌아가기</div>
+            </Link>
         </div>
     )
 }

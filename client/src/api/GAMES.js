@@ -1,6 +1,17 @@
 const GAMES = [
     // order games with newly date order
     {
+        title:"colortowerbreak",
+        titleKor:"타워브레이크",
+        sourceURL:"https://jellinggame.com/Games/fcolortowerbreak/index.html",
+        mainUrl:"colortowerbreak",
+        thumbImage:"https://images.jellinggame.com/thumbImages/colortowerbreak-thumb.png",
+        introImage:"https://images.jellinggame.com/introImages/colortowerbreak-intro.png",
+        lang:"Eng",
+        desc:`- It is a casual game where you destroy towers stacked with blocks.`,
+        descKor:`- 블럭으로 쌓여있는 타워를 부수는 캐주얼 게임 입니다.`
+    },
+    {
         title:"Palette Game",
         titleKor:"팔레트 게임",
         sourceURL:"https://jellinggame.com/Games/palette/index.html",
