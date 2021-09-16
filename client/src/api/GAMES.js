@@ -3,7 +3,7 @@ const GAMES = [
     {
         title:"colortowerbreak",
         titleKor:"타워브레이크",
-        sourceURL:"https://jellinggame.com/Games/fcolortowerbreak/index.html",
+        sourceURL:"https://jellinggame.com/Games/colortowerbreak/index.html",
         mainUrl:"colortowerbreak",
         thumbImage:"https://images.jellinggame.com/thumbImages/colortowerbreak-thumb.png",
         introImage:"https://images.jellinggame.com/introImages/colortowerbreak-intro.png",
