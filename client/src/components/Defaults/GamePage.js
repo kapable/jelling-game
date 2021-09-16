@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { withRouter } from 'react-router-dom';
 import MetaTagRenderer from './MetaTagRenderer';
 
 function GamePage(props) {
+    useEffect(() => {
+        window.oncontextmenu = function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+        };
+    }, [])
+
     return (
         <div className="game-div">
             <MetaTagRenderer game={props.game}/>
