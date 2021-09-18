@@ -1,6 +1,17 @@
 const GAMES = [
     // order games with newly date order
     {
+        title:"Making Ten",
+        titleKor:"메이킹텐",
+        sourceURL:"https://jellinggame.com/Games/makingten/index.html",
+        mainUrl:"makingten",
+        thumbImage:"https://images.jellinggame.com/thumbImages/makingten-thumb.png",
+        introImage:"https://images.jellinggame.com/introImages/makingten-intro.png",
+        lang:"Eng",
+        desc:`- Puzzle game to make ten by number`,
+        descKor:`- 숫자로 10을 만들어가는 퍼즐 게임`,
+    },
+    {
         title:"colortowerbreak",
         titleKor:"타워브레이크",
         sourceURL:"https://jellinggame.com/Games/colortowerbreak/index.html",
