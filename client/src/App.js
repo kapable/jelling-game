@@ -23,26 +23,6 @@ function App() {
     })
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search)
-    if(window.location.pathname.includes('/play')) {
-      function absorbEvent_(event) {
-        var e = event || window.event;
-        e.preventDefault && e.preventDefault();
-        e.stopPropagation && e.stopPropagation();
-        e.cancelBubble = true;
-        e.returnValue = false;
-        return false;
-    }
-
-    function preventLongPressMenu(nodes) {
-        for(var i=0; i<nodes.length; i++){
-        nodes[i].ontouchstart = absorbEvent_;
-        nodes[i].ontouchmove = absorbEvent_;
-        nodes[i].ontouchend = absorbEvent_;
-        nodes[i].ontouchcancel = absorbEvent_;
-        }
-    }
-    preventLongPressMenu(document.querySelectorAll('div'));
-    }
   }, [])
 
   const mainMetaTagRenderer = () => {
