@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { withRouter, Link } from 'react-router-dom';
 import MetaTagRenderer from './MetaTagRenderer';
 import STARTBTN from '../../api/DefaultImg/start-btn.png'
 import ReactGA from 'react-ga';
 
 function IntroPage(props) {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const onImgClick = () => {
         _eventSenderGA("Paging", "Click Start-game Image", 'intro page')

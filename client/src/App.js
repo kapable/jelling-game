@@ -65,7 +65,6 @@ function App() {
             </Route>
           ))}
           
-
           {/* Login route */}
           <Route path='/login' component={LoginPage} exact />
 
