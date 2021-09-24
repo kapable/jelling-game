@@ -7,11 +7,11 @@ phases:
       - npm i npm@latest -g
       - npm cache clean --force
       - rm -rf node_modules package-lock.json
-      - npm install --unsafe-perm
+      - npm install --unsafe-perm --prefix client
       - npm install babel-cli cross-env webpack-cli --global
   build:
     commands:
-      - npm run build
+      - npm run build --prefix client
 artifacts:
   files:
     - '**/*'
