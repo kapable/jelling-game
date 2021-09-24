@@ -7,6 +7,7 @@ import RegisterPage from './components/Users/RegisterPage';
 import MyPage from './components/Users/MyPage';
 import IntroPage from './components/Defaults/IntroPage';
 import GamePage from './components/Defaults/GamePage';
+import Privacy from './components/Defaults/Privacy';
 import Footer from './components/Defaults/Footer';
 import GAMES from './api/GAMES'
 import TOPBANNER from './api/DefaultImg/top-banner.png'
@@ -59,7 +60,7 @@ function App() {
         <Switch>
           {/* Show All Game thumbnail */}
           {['/', '/m'].map((item) => (
-            <Route path={item} exact>
+            <Route path={item} key={"main"+item} exact>
               {mainMetaTagRenderer()}
               <MainPage />
             </Route>
@@ -93,9 +94,12 @@ function App() {
               exact
             />
           ))}
+
+          {/* Privacy route */}
+          <Route exact path="/privacy" component={Privacy} />
         </Switch>
+        <Footer/>
       </Router>
-      <Footer/>
     </div>
   );
 }

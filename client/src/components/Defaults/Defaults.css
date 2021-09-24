@@ -103,6 +103,16 @@ h2 {
   color: #cecfd0;
 }
 
+.footer-to-privacy-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Privay policy */
+.privacy-div {
+  margin: 2rem;
+}
+
 /* PC screen Responsive */
 @media (min-width: 767px) {
   .intro-title-desc-div {
