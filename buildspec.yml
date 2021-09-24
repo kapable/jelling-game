@@ -8,7 +8,7 @@ phases:
       - npm install babel-cli cross-env webpack-cli --global
   build:
     commands:
-      - npm run build
+      - /client npm run build
 artifacts:
   files:
     - '**/*'
