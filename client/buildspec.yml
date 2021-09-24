@@ -4,6 +4,9 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
+      - npm i npm@latest -g
+      - npm cache clean --force
+      - rm -rf node_modules package-lock.json
       - npm install --unsafe-perm
       - npm install babel-cli cross-env webpack-cli --global
   build:
