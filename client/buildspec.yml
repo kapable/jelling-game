@@ -15,4 +15,4 @@ artifacts:
   base-directory: 'build'
 cache:
   paths:
-    - "/codebuild/output/src877052845/src/node_modules/**/*"
+    - "./node_modules/**/*"
