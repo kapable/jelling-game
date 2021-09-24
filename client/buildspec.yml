@@ -8,7 +8,6 @@ phases:
       - npm install babel-cli cross-env webpack-cli --global
   pre_build:
     - npm install
-    - echo pre_build completed on `date`
   build:
     commands:
       - npm run build
