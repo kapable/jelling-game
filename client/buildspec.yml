@@ -5,8 +5,8 @@ phases:
       nodejs: 10
     commands:
       - npm i npm@latest -g
-      - npm cache clean --force
-      - rm -rf node_modules package-lock.json
+      - npm cache clean --force --prefix client
+      - rm -rf node_modules package-lock.json --prefix client
       - npm install --unsafe-perm --prefix client
       - npm install babel-cli cross-env webpack-cli --global
   build:
