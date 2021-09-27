@@ -34,7 +34,7 @@ function MainPage() {
         <>
             <NavigationBar />
             <div className="main-div">
-                <img src={TOPBANNER} alt="JELLING GAMES" className="main-game-thumbnail-img"/>
+                <img style={{margin: '3.5rem auto 0'}} src={TOPBANNER} alt="JELLING GAMES" className="main-game-thumbnail-img"/>
                 {GAMES.map((item) => (
                     <Link to={'/'+item.mainUrl+'/'} className="main-game-thumbnail-link" key={item.mainUrl} onClick={onImgClick}> 
                         <img className="main-game-thumbnail-img" src={item.thumbImage} alt={item.title} />

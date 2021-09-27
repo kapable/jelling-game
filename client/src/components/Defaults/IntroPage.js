@@ -36,7 +36,7 @@ function IntroPage(props) {
                     <img src={props.game.introImage} alt={props.game.title} className="intro-img"/>
                 </Link>
                 <Link to={'/'+props.game.mainUrl + '/play/'} className="intro-go-to-game-btn-link" onClick={onBtnClick}>
-                    <img src={STARTBTN} alt="게임 시작하기" className="intro-img"/>
+                    <img src={STARTBTN} alt="게임 시작하기" className="intro-img" style={{margin: '0 auto'}} />
                 </Link>
                 <div className="intro-title-desc-div">
                     <h3 className="intro-title">{props.game.titleKor}</h3>
