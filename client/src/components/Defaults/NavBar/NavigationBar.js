@@ -1,10 +1,8 @@
 import React from 'react'
 import LeftMenu from './LeftMenu';
-import RightMenu from './RightMenu';
-import MobileMenu from './MobileMenu';
 import './NavBar.css';
 
-function NavBar() {
+function NavigationBar() {
     // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
@@ -16,22 +14,16 @@ function NavBar() {
         }
         prevScrollpos = currentScrollPos;
     }
-
+    
     return (
         <nav className="navMenu" id="navbar">
             <div className="menu__container">
                 <div className="menu_left">
                     <LeftMenu mode="horizontal" />
                 </div>
-                <div className="menu_rigth">
-                    <RightMenu mode="horizontal" />
-                </div>
-                <div className="mobile-nav-class">
-                    <MobileMenu />
-                </div>
             </div>
         </nav>
     )
 }
 
-export default NavBar
+export default NavigationBar

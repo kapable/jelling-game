@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
+import Logo from '../../../api/DefaultImg/logo-img.png'
 
-function LeftMenu(props) {
+function LeftMenu() {
     return (
         <Fragment>
-            <a href="/">Jelling</a>
+            <a href="/">
+                <img src={Logo} alt="jelling" className="nav-logo"/>
+            </a>
         </Fragment>
     )
 }

@@ -17,9 +17,9 @@ a:active {
 .navMenu {
   position: fixed;
   top: 0;
-  padding: 0 20px;
+  padding: 0 20px 0 0;
   border-bottom: solid 1px #e8e8e8;
-  overflow: auto;
+  overflow-y: hidden;
   transition: top 0.4s;
   box-shadow: 0 0 30px #f3f1f1;
   background-color: white;
@@ -30,6 +30,11 @@ a:active {
   text-align: center;
 }
 
+.nav-logo {
+  margin: 0.5rem auto;
+  height: 2.5rem;
+}
+
 .menu__container .menu_left {
   float: left;
 }
@@ -38,110 +43,6 @@ a:active {
   float: right;
 }
 
-.menu__logo a {
-  font-size: 20px;
-  padding: 19px 20px;
-}
-
 .menu__container a {
   padding: 1rem 1rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 767px) {
-  .menu_left,
-  .menu_rigth {
-    display: none;
-  }
-
-  .mobile-nav-class {
-    float: left;
-  }
-
-  .menu__mobile-button {
-    border: none;
-    height: 3.5rem;
-    display: block;
-    background-color: white;
-  }
-
-  .mobile__menu__wrapper {
-    display: flex;
-    height: 100%;
-    margin: 3rem auto;
-    color: black;
-    flex-flow: column nowrap;
-  }
-
-  .mobile__menu__wrapper__ul {
-    list-style: none;
-    animation: fadein 1s;
-    -moz-animation: fadein 1s; /* Firefox */
-    -webkit-animation: fadein 1s; /* Safari and Chrome */
-    -o-animation: fadein 1s; /* Opera */
-  }
-
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @-moz-keyframes fadein {
-    /* Firefox */
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadein {
-    /* Safari and Chrome */
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @-o-keyframes fadein {
-    /* Opera */
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .none {
-    display: none;
-  }
-
-  /* hamburger menu */
-  .hamburger-menu-bar1,
-  .hamburger-menu-bar2,
-  .hamburger-menu-bar3 {
-    width: 1.3rem;
-    height: 0.23rem;
-    background-color: #333;
-    margin: 0.2rem 0;
-    transition: 0.4s;
-  }
-  .x__menu > .hamburger-menu-bar1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
-    transform: rotate(-45deg) translate(-5px, 5px);
-  }
-
-  .x__menu > .hamburger-menu-bar2 {
-    opacity: 0;
-  }
-
-  .x__menu > .hamburger-menu-bar3 {
-    -webkit-transform: rotate(45deg) translate(-5px, -5px);
-    transform: rotate(45deg) translate(-5px, -5px);
-  }
 }
