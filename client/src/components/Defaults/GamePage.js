@@ -21,7 +21,7 @@ function GamePage(props) {
             nodes[i].ontouchcancel = absorbEvent_;
             }
         }
-        preventLongPressMenu(document.querySelectorAll('div'));
+        preventLongPressMenu(document.querySelectorAll('.game-div'));
         window.oncontextmenu = function(event) {
             event.preventDefault();
             event.stopPropagation();
