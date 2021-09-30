@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import GAMES from '../../api/GAMES';
 import TOPBANNER from '../../api/DefaultImg/top-banner.png';
@@ -8,6 +8,30 @@ import ReactGA from 'react-ga';
 import './Defaults.css';
 
 function MainPage() {
+    // for Go-to-Top Button
+    const [IsVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        if(window.pageYOffset > 300) {
+        setIsVisible(true);
+        } else {
+        setIsVisible(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", toggleVisibility);
+        return () => setIsVisible(true); // for cleanup function
+    }, [])
+    // --- for Go-to-Top Button
+
     const commingSoonRenderer = (num_loop) => {
         let comming_soons = [];
         for(let i=0; i < num_loop;i++) {
@@ -41,6 +65,14 @@ function MainPage() {
                     </Link>
                 ))}
                 {commingSoonRenderer(5)}
+            </div>
+            {/* Go to Top Button */}
+            <div className="scroll-to-top">
+            {IsVisible && 
+                <div onClick={scrollToTop}>
+                <img src='https://images.jellinggame.com/defaultImages/go-to-top.png' alt='go to top' />
+                </div>
+            }
             </div>
         </>
     )
