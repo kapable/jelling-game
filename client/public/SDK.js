@@ -60,24 +60,26 @@ function popupDiv(isShow) {
         closeBtn.style.border = "none";
         closeBtn.style.color = 'white';
 
-        adsIns.style.display = "flex";
+        adsIns.style.display = "block";
         adsIns.style.zIndex = "0";
         adsIns.style.justifyContent = "center";
         adsIns.style.alignItems = "center";
+        adsIns.style.width = "300px";
+        adsIns.style.height = "550px"
 
         navMenu.style.zIndex = "-10";
 
         const client = document.createAttribute("data-ad-client");
         const slot = document.createAttribute("data-ad-slot");
-        const adFormat = document.createAttribute("data-ad-format");
+        // const adFormat = document.createAttribute("data-ad-format");
 
         client.value = "ca-pub-3646750237820161";
         slot.value = "2904379914";
-        adFormat.value ="vertical";
+        // adFormat.value ="vertical";
 
         adsIns.setAttributeNode(client);
         adsIns.setAttributeNode(slot);
-        adsIns.setAttributeNode(adFormat);
+        // adsIns.setAttributeNode(adFormat);
 
         popup.appendChild(popupInner);
         popupInner.appendChild(closeBtn);
