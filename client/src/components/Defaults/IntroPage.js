@@ -3,7 +3,6 @@ import { withRouter, Link } from 'react-router-dom';
 import MetaTagRenderer from './MetaTagRenderer';
 import NavigationBar from '../Defaults/NavBar/NavigationBar';
 import STARTBTN from '../../api/DefaultImg/start-btn.png';
-import PopUp from '../Ads/PopUp';
 import ReactGA from 'react-ga';
 
 function IntroPage(props) {
@@ -50,7 +49,6 @@ function IntroPage(props) {
                         className="go-to-back-btn"
                         >← 메인으로 돌아가기</div>
                 </Link>
-                <PopUp />
             </div>
         </>
     )

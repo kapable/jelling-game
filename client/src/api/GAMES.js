@@ -1,6 +1,17 @@
 const GAMES = [
     // order games with newly date order
     {
+        title:"Thief Prison",
+        titleKor:"탈옥",
+        sourceURL:"https://jellinggame.com/Games/thiefprison/index.html",
+        mainUrl:"thiefprison",
+        thumbImage:"https://images.jellinggame.com/thumbImages/thiefprison-thumb.png",
+        introImage:"https://images.jellinggame.com/introImages/thiefprison-intro.png",
+        lang:"Eng",
+        desc:`- Puzzle game to make ten by number`,
+        descKor:`- 숫자로 10을 만들어가는 퍼즐 게임`,
+    },
+    {
         title:"Making Ten",
         titleKor:"메이킹텐",
         sourceURL:"https://jellinggame.com/Games/makingten/index.html",

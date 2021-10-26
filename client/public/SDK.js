@@ -44,7 +44,7 @@ function popupDiv(isShow) {
 		popup.style.margin = "auto";
         popup.style.zIndex = "2";
 		
-        popupInnerBorder = "4%";
+        const popupInnerBorder = "4%";
 		popupInner.style.position = "absolute";
         
 		popupInner.style.top = popupInnerBorder;
