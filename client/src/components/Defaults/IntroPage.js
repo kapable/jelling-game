@@ -32,12 +32,12 @@ function IntroPage(props) {
             <NavigationBar />
             <div className="intro-game-main-div">
                 <MetaTagRenderer game={props.game}/>
-                <Link to={'/'+props.game.mainUrl + '/play/'} className="intro-go-to-game-img-link" onClick={onImgClick}>
+                <a href={props.game.sourceURL} className="intro-go-to-game-img-link" onClick={onImgClick}>
                     <img src={props.game.introImage} alt={props.game.title} className="intro-img"/>
-                </Link>
-                <Link to={'/'+props.game.mainUrl + '/play/'} className="intro-go-to-game-btn-link" onClick={onBtnClick}>
+                </a>
+                <a href={props.game.sourceURL} className="intro-go-to-game-btn-link" onClick={onBtnClick}>
                     <img src={STARTBTN} alt="게임 시작하기" className="intro-img" style={{margin: '0 auto'}} />
-                </Link>
+                </a>
                 <div className="intro-title-desc-div">
                     <h3 className="intro-title">{props.game.titleKor}</h3>
                     <p className="intro-desc">{props.game.descKor}</p>
