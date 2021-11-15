@@ -39,15 +39,13 @@ function IntroPage(props) {
                     <img src={STARTBTN} alt="게임 시작하기" className="intro-img" style={{margin: '0 auto'}} />
                 </a>
                 <div className="intro-title-desc-div">
-                    <h3 className="intro-title">{props.game.titleKor}</h3>
-                    <p className="intro-desc">{props.game.descKor}</p>
                     <h3 className="intro-title">{props.game.title}</h3>
                     <p className="intro-desc">{props.game.desc}</p>
                 </div>
                 <Link to='/' className="intro-list-go-back-link">
                     <div
                         className="go-to-back-btn"
-                        >← 메인으로 돌아가기</div>
+                        >← Go to Main</div>
                 </Link>
             </div>
         </>

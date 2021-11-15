@@ -48,7 +48,8 @@ function popupDiv(isShow) {
 		popupInner.style.position = "absolute";
         
 		popupInner.style.top = popupInnerBorder;
-
+        popupInner.style.left = "50%";
+        popupInner.style.transform = "translate(-50%, 0%)";
 		popupInner.style.margin = "auto";
 		popupInner.style.background = "rgba(0,0,0,0)";
         popupInner.style.zIndex = "1";
@@ -71,15 +72,12 @@ function popupDiv(isShow) {
 
         const client = document.createAttribute("data-ad-client");
         const slot = document.createAttribute("data-ad-slot");
-        // const adFormat = document.createAttribute("data-ad-format");
 
         client.value = "ca-pub-3646750237820161";
         slot.value = "2904379914";
-        // adFormat.value ="vertical";
 
         adsIns.setAttributeNode(client);
         adsIns.setAttributeNode(slot);
-        // adsIns.setAttributeNode(adFormat);
 
         popup.appendChild(popupInner);
         popupInner.appendChild(closeBtn);
