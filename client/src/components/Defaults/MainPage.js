@@ -6,6 +6,8 @@ import COMMINGSOON from '../../api/DefaultImg/coming-soon-thumb.png';
 import NavigationBar from '../Defaults/NavBar/NavigationBar';
 import ReactGA from 'react-ga';
 import './Defaults.css';
+import Crypto from './Crypto';
+import Upbit from './Upbit';
 
 function MainPage() {
     // for Go-to-Top Button
@@ -66,6 +68,8 @@ function MainPage() {
                 ))}
                 {commingSoonRenderer(5)}
             </div>
+            <Crypto />
+            <Upbit />
             {/* Go to Top Button */}
             <div className="scroll-to-top">
             {IsVisible && 
